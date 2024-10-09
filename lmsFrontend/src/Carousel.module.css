@@ -1,0 +1,23 @@
+.carouselControlPrev,
+.carouselControlNext {
+  width: 5%;
+  background: none; /* Remove the default background */
+}
+
+.carouselControlPrevIcon,
+.carouselControlNextIcon {
+  /*background-image: url('path/to/custom-icon.svg'); /* Path to your custom icon */
+  filter: invert(78%) sepia(27%) saturate(3312%) hue-rotate(146deg)
+    brightness(97%) contrast(97%);
+  width: 30px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+}
+
+/* Reposition controls */
+.carouselControlPrev {
+  left: 2px; /* Adjust distance from left edge */
+}
+
+.carouselControlNext {
+  right: 2px; /* Adjust distance from right edge */
+}
