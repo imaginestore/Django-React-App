@@ -1,1 +1,1 @@
-web: gunicorn .\lmsBackend\lms_api.wsgi --log-file -
+web: gunicorn lmsBackend.lms_api.wsgi --log-file -
