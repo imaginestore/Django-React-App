@@ -24,6 +24,7 @@ environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+ENVIRONMENT = config("ENVIRONMENT", default="development")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -33,7 +34,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+if ENVIRONMENT == 'development':
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = ['lms.imaginestore.com', 'localhost', '127.0.0.1']
 
@@ -106,12 +111,12 @@ WSGI_APPLICATION = 'lms_api.wsgi.application'
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
 #}
-ENVIRONMENT = config("ENVIRONMENT", default="development")
 
 if ENVIRONMENT == "production":
     # Use dj_database_url when in production (like Railway)
     DATABASES = {
         'default': dj_database_url.config(
+            # default=f'postgres://{config("DB_USER")}:{config("DB_PASSWORD")}@{config("DB_HOST")}:{config("DB_PORT")}/{config("DB_NAME")}',
             conn_max_age=600,
             ssl_require=True  # Set to True for Railway or production environments.
         )
