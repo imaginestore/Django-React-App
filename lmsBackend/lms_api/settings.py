@@ -24,7 +24,7 @@ environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ENVIRONMENT = config("ENVIRONMENT", default="development")
+ENVIRONMENT = config("ENVIRONMENT", default="production")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -40,7 +40,7 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['lms.imaginestore.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['https://lms-imaginestorelabs.up.railway.app', 'localhost', '127.0.0.1']
 
 SITE_ID = 1
 
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'storages',
     'jazzmin',
+    'admin_honeypot',
     # 'djoser',
     'rest_framework_simplejwt.token_blacklist',
     'rest_framework.authtoken',
@@ -316,6 +317,8 @@ CORS_ALLOW_ALL_ORIGINS = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
+ACCOUNT_USERNAME_BLACKLIST = ['admin', 'theboss']
 
 # Following code is for CKEditor-5
 customColorPalette = [
