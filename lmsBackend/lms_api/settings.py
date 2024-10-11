@@ -49,7 +49,7 @@ SITE_ID = 1
 
 INSTALLED_APPS = [
 	'lmsBackend.main',
-    'accounts',
+    'lmsBackend.accounts',
     'corsheaders',
     'rest_framework',
     'storages',
