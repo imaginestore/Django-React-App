@@ -3,7 +3,7 @@ from django.db.models import Q
 from django.core import serializers
 from django.core.mail import send_mail
 from django_ckeditor_5.fields import CKEditor5Field
-from accounts.models import User
+from lmsBackend.accounts.models import User
 from django.utils import timezone
 from datetime import timedelta
 
