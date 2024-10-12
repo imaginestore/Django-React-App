@@ -48,8 +48,8 @@ SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
-	'lmsBackend.main',
-    'lmsBackend.accounts',
+	'main',
+    'accounts',
     'corsheaders',
     'rest_framework',
     'storages',

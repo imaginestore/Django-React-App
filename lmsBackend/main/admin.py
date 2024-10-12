@@ -1,7 +1,7 @@
 from django.contrib import admin
 from . import models
 
-from lmsBackend.accounts.models import User
+from accounts.models import User
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
 class UserModelAdmin(BaseUserAdmin):
