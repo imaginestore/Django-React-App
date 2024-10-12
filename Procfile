@@ -1,1 +1,1 @@
-web: gunicorn os.getenv(WSGI_PATH):application --log-file -
+web: gunicorn lmsBackend.lms_api.wsgi --log-file -
