@@ -1,1 +1,1 @@
-web: cd lmsBackend python manage.py migrate && gunicorn lmsBackend.lms_api.wsgi:application --log-file -
+web: chdir lmsBackend && gunicorn lms_api.wsgi:application --log-file -
