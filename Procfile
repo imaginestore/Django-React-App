@@ -1,1 +1,1 @@
-web: gunicorn --chdir lmsBackend lms_api.wsgi --log-file -
+web: gunicorn --pythonpath lmsBackend lms_api.wsgi --log-file -
