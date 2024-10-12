@@ -1,1 +1,1 @@
-web: chdir lmsBackend && gunicorn lms_api.wsgi:application --log-file -
+web: gunicorn os.getenv(WSGI_PATH):application --log-file -
