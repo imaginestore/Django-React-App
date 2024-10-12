@@ -100,7 +100,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lms_api.wsgi.application'
+if ENVIRONMENT == 'development':
+    WSGI_APPLICATION = 'lms_api.wsgi.application'
+else:
+    WSGI_APPLICATION = 'lmsBackend.lms_api.wsgi.application'
 
 
 # Database
