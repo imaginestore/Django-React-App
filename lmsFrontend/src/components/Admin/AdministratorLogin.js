@@ -12,8 +12,10 @@ import {
 import { Redirect } from "react-router-dom";
 
 import axios from "axios";
-const baseURL = "http://127.0.0.1:8000/api";
-const baseURL1 = "http://127.0.0.1:8000/api/user/";
+// const baseURL = "http://127.0.0.1:8000/api";
+// const baseURL1 = "http://127.0.0.1:8000/api/user/";
+const baseURL = `${process.env.REACT_APP_API_BASE_URL}`;
+const baseURL1 = `${process.env.REACT_APP_API_BASE_URL}/user/`;
 
 function AdministratorLogin() {
   const navigate = useNavigate();

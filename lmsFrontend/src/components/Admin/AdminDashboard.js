@@ -15,7 +15,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 // import { Bar } from "react-chartjs-2";
-const baseURL = "http://127.0.0.1:8000/api";
+// const baseURL = "http://127.0.0.1:8000/api";
+const baseURL = `${process.env.REACT_APP_API_BASE_URL}`;
 
 function AdminDashboard() {
   const [teacherData, setTeacherData] = useState([]);
