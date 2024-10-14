@@ -1,3 +1,4 @@
+import React from "react";
 import { removeToken, removeUserInfo } from "../LocalStorageService";
 function AdministratorLogout() {
   removeToken();
