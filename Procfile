@@ -1,1 +1,1 @@
-web: cd lmsBackend gunicorn lms_api.wsgi --log-file -
+web: cd lmsBackend && gunicorn lms_api.wsgi --log-file -
