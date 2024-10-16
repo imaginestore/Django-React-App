@@ -40,7 +40,7 @@ if ENVIRONMENT == 'development':
 else:
     DEBUG = False
 
-ALLOWED_HOSTS = ['https://lms-imaginestorelabs.up.railway.app', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['https://lms-imaginestore-4014527ab9c5.herokuapp.com/', 'localhost', '127.0.0.1']
 
 SITE_ID = 1
 
